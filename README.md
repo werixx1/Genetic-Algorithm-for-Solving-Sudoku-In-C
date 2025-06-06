@@ -1,2 +1,4 @@
 # Genetic-Algorithm-for-Solving-Sudoku-In-C
-uni project for programming in c course
+third sudoku project............................... alr
+
+![me_rn](https://github.com/user-attachments/assets/6e6c8b5c-a7c5-40b4-a8f0-3c1744078d16)
