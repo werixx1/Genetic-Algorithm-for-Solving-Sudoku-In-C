@@ -4,6 +4,7 @@
 #include <time.h>
 #include <string.h> 
 #include <stdbool.h>
+#include "load_sudoku.h"
 
 int **allocate_board(int size)
 {
@@ -127,7 +128,7 @@ void remove_k_digits(int **board, int size, int k)
     }
 }
 
-int **generate_sudoku_with_solution(int size, int empty_cells)
+int **generate_sudoku(int size, int empty_cells)
 {
     int **board = allocate_board(size);
     for (int i = 0; i < size; i++)
@@ -138,20 +139,12 @@ int **generate_sudoku_with_solution(int size, int empty_cells)
     if (!fill_remaining(board, size, 0, 0))
     {
         free_board(board, size);
-        return generate_sudoku_with_solution(size, empty_cells); 
+        return generate_sudoku(size, empty_cells); 
     }
 
     if (empty_cells > size * size)
         empty_cells = size * size - 1;
 
-    return board;
-}
-
-// function for ga algorithm to work with for creating a solution
-int **return_unsolved_sudoku(int** board)
-{
-    int size = 9; // TODO: turn into constant variable at the top of the program
-    int empty_cells = 40;
     remove_k_digits(board, size, empty_cells);
     return board;
 }

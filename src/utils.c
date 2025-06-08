@@ -4,6 +4,7 @@
 #include <time.h>
 #include <string.h> 
 #include <stdbool.h>
+#include "utils.h"
 
 void print_board(int size, int** board)
 {

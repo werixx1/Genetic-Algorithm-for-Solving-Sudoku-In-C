@@ -3,7 +3,7 @@
 
 #include <stdbool.h>
 
-// functions stolen and modified from previous project hehe (again..)
+// functions stolen and modified from previous project hehe
 int **allocate_board(int size);
 void free_board(int **board, int size);
 void copy_board(int **og_board, int **new_board, int size);
@@ -15,7 +15,6 @@ void fill_box(int **board, int row_start, int col_start, int size);
 void fill_diagonal(int **board, int size);
 bool fill_remaining(int **board, int size, int row, int col);
 void remove_k_digits(int **board, int size, int k);
-int **generate_sudoku_with_solution(int size, int empty_cells);
-int **return_unsolved_sudoku(int** board);
+int **generate_sudoku(int size, int empty_cells);
 
 #endif
